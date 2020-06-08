@@ -8,14 +8,14 @@ CLASS zcl_deploy_test DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-
-
 CLASS zcl_deploy_test IMPLEMENTATION.
+
   METHOD if_oo_adt_classrun~main.
     DATA:it_bookings TYPE TABLE OF zdeploy_test.
 
 *    read current timestamp
     GET TIME STAMP FIELD DATA(zv_tsl).
+    
 *   fill internal table (itab)
     it_bookings = VALUE #(
         ( booking  = '1' customername = 'Buchholm' numberofpassengers = '3' emailaddress = 'tester1@flight.example.com'
